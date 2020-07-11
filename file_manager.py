@@ -11,12 +11,7 @@ drives = [chr(x) + ':' for x in range(65, 90) if os.path.exists(chr(x) + ':')]
 def list_directories():
     listdir = os.listdir(os.getcwd())
     for components in listdir:
-        if os.path.isfile(components):
-            print('Files:')
-            print('|-' + components)
-        if os.path.isdir(components):
-            print('Folders:')
-            print('|-' + components)
+        print('|-' + components)
 
 
 # Select driver that files or folder you need
